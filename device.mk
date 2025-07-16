@@ -51,6 +51,9 @@ PRODUCT_PACKAGES += \
 TARGET_USES_DOLBY := true
 
 # Init scripts
+$(call soong_config_set,libinit,vendor_init_lib,libinit_sweet)
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sweet
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.sweet.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sweet.rc
 
