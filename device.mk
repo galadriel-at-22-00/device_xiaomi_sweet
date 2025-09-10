@@ -34,10 +34,7 @@ TARGET_SCREEN_HEIGHT := 2400
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts \
-    XiaomiDolby \
-    XiaomiDolbyOverlay \
-    DSPVolumeSynchronizer
+    XiaomiParts
 
 # Display
 PRODUCT_COPY_FILES += \
@@ -46,9 +43,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     hwcomposer.sweet
-
-# Dolby
-TARGET_USES_DOLBY := true
 
 # Init scripts
 $(call soong_config_set,libinit,vendor_init_lib,libinit_sweet)
